@@ -14,6 +14,11 @@ phases:
       - echo Building portfolio...
       - npm run build
 
+  post_build:
+    commands:
+      - echo Deploying portfolio to S3...
+      - aws s3 sync dist/ s3://rilwana-cloud-portfolio/
+
 artifacts:
   base-directory: dist
   files:
