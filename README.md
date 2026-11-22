@@ -38,3 +38,17 @@ The production website is generated in the `dist` folder. It can be deployed to 
 ## Accuracy note
 
 The portfolio describes SIEM, alert triage, phishing analysis, incident response and MITRE ATT&CK as learning areas, not professional experience. Update the content as you gain hands-on experience.
+
+## 🚀 AWS CI/CD Deployment
+
+This portfolio is deployed using AWS CI/CD services.
+
+**Technologies used:**
+- GitHub – Source Code Repository
+- AWS CodeBuild – Automated Build Process
+- Amazon S3 – Static Website Hosting
+
+**Deployment Workflow:**
+
+Whenever new code is pushed to GitHub, a webhook automatically triggers AWS CodeBuild. CodeBuild installs dependencies, builds the React application using Vite, and deploys the production files from the `dist/` folder to Amazon S3.
+git commit -m "Test automatic AWS deployment"
